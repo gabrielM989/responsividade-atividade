@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão Grid</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+
+            display: grid;
+            background-color: aqua;
+
+            grid-template-rows: 300px 300px 300px; /* 1fr -- uma fração da tela, cada elemento representa uma linha "rows" */
+            grid-template-columns: repeat(2, 1fr); /* Está informando que é duas colunas de 1fr */
+            grid-template-areas: 
+            'div1 div1'
+            'div2 div3'
+            'div4 div4'
+            
+            ;
+        }
+
+        .div1{
+            background-color: red;
+            grid-area: div1;
+        }
+
+        .div2{
+            background-color: yellow;
+            grid-area: div2;
+
+            background: url(imagens/dog.jpg);
+            background-size: cover; /* Para inserir imagem no back */
+        }
+
+        .div3{
+            background-color: sienna;
+            grid-area: div3;
+        }
+        .div4{
+            background-color: blue;
+            grid-area: div4;
+        }
+
+    </style>
+</head>
+<body>
+
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+    
+</body>
+</html>

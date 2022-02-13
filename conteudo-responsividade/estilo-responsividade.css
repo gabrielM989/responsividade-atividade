@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.g-container{
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 1fr 300px;
+
+    grid-template-areas: 
+    
+    'header header'
+    'sec1 sec2'
+    'f f'
+
+    ;
+
+}
+
+header{
+    background: orange;
+
+    grid-area: header;
+}
+
+.s1{
+    background: pink;
+
+    grid-area: sec1;
+
+}
+.s2{
+    background: chocolate;
+
+    grid-area: sec2;
+
+}
+
+footer{
+    background: blue;
+
+    grid-area: f;
+
+
+}
+
+@media(max-width: 400px){ /* sempre que a altura máxima for 393px, irá fazer o código abaixo */
+
+    .g-container{
+    
+        display: grid;
+        grid-template-rows: 100px 1fr 200px 100px;
+        grid-template-columns: 1fr;
+    
+        grid-template-areas: 
+        
+        'header'
+        'sec1' 
+        'sec2'
+        'f'
+    
+        ;
+    
+    }
+
+}
+
+@media(max-width: 450px){ /* sempre que a altura máxima for 393px, irá fazer o código abaixo */
+
+    .s1{
+        
+    
+        display: grid;
+        grid-template-rows: 100px 1fr ;
+        grid-template-columns: 1fr 2fr;
+    
+        grid-template-areas: 
+        
+        'header sec1'
+        'sec2 f' 
+        
+    
+        ;
+    
+    }
+
+}
